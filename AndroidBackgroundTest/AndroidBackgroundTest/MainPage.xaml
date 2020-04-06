@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AndroidBackgroundTest.MainPage">
+
+    <StackLayout Padding="44">
+        <Button Text="Check In Use" x:Name="CheckInUse" Clicked="CheckInUse_Clicked"/>
+        <Button Text="Request In Use" x:Name="RequestInUse" Clicked="RequestInUse_Clicked"/>
+        <Button Text="Check Always" x:Name="CheckAlways" Clicked="CheckAlways_Clicked"/>
+        <Button Text="Request Always" x:Name="RequestAlways" Clicked="RequestAlways_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
