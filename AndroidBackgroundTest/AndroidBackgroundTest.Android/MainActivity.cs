@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AndroidBackgroundTest.Droid
 {
@@ -29,5 +31,14 @@ namespace AndroidBackgroundTest.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+    }
+
+    class MyPermission : Xamarin.Essentials.Permissions.BasePlatformPermission
+    {
+        public override (string androidPermission, bool isRuntime)[] RequiredPermissions => new List<(string androidPermission, bool isRuntime)>
+        {
+            (Android.Manifest.Permission.ReadExternalStorage, true),
+            (Android.Manifest.Permission.WriteExternalStorage, true)
+        }.ToArray();
     }
 }
